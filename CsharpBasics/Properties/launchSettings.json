@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CsharpBasics": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Harshni CSharp Training\""
+    }
+  }
+}
