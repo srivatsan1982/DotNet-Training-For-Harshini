@@ -3,7 +3,37 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <StartupObject>CsharpBasics.Program</StartupObject>
+    <StartupObject>CSharp.Operators</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AccessModifiers.cs" />
+    <Compile Remove="AccessNamespaceClasses.cs" />
+    <Compile Remove="AccessSharedAssembly.cs" />
+    <Compile Remove="AccessSpecifiers.cs" />
+    <Compile Remove="Attributes.cs" />
+    <Compile Remove="Classes.cs" />
+    <Compile Remove="Delegates.cs" />
+    <Compile Remove="EventHandling.cs" />
+    <Compile Remove="ExceptionHandling.cs" />
+    <Compile Remove="ExtensionMethods.cs" />
+    <Compile Remove="FileStream.cs" />
+    <Compile Remove="FileStreamBasics.cs" />
+    <Compile Remove="FirstClass.cs" />
+    <Compile Remove="Functions.cs" />
+    <Compile Remove="Generics.cs" />
+    <Compile Remove="Indexer.cs" />
+    <Compile Remove="Interfaces.cs" />
+    <Compile Remove="Interop.cs" />
+    <Compile Remove="Loops.cs" />
+    <Compile Remove="Namespaces.cs" />
+    <Compile Remove="PrivateAssemblyAccessor.cs" />
+    <Compile Remove="Reflections.cs" />
+    <Compile Remove="SecondClass.cs" />
+    <Compile Remove="Structures.cs" />
+    <Compile Remove="TestAccessSpecifier.cs" />
+    <Compile Remove="Threading.cs" />
+    <Compile Remove="UsingKeyWord.cs" />
+  </ItemGroup>
 
 </Project>
