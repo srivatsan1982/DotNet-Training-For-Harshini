@@ -8,14 +8,15 @@ namespace CSharp
 {
     struct Employee
     {
-        public Employee(int empId, string firstName, string middleName, string lastName, DateTime dob) {
+        public Employee(int empId, string firstName, string middleName, string lastName, DateTime dob,string nickName) {
             EmployeeId = empId;
             FirstName = firstName;
             MiddleName = middleName;
             LastName = lastName;
             DOB = dob;
+            NickName = nickName;
         }
-
+        public string NickName { get; set; }
         public int EmployeeId;
         public string FirstName;
         public string MiddleName;
@@ -27,11 +28,17 @@ namespace CSharp
         }
     }
 
-    class Structures
+    public class Structures
     {
-        public static void Display(int EmployeeId, string FirstName, string MiddleName, string LastName, string DOB) {
+        void Display(int EmployeeId, string FirstName, string MiddleName, string LastName, string DOB) {
             Console.WriteLine(string.Format("Employee Id {0},First Name {1},Middle Name {2},Last Name {3},DOB {4}",
                                EmployeeId, FirstName, MiddleName, LastName, DOB));
+        }
+
+        private static void DisplayEmployee(Employee emp)
+        {
+            Console.WriteLine(string.Format("Employee Id {0},First Name {1},Middle Name {2},Last Name {3},DOB {4}",
+                               emp.EmployeeId, emp.FirstName, emp.MiddleName, emp.LastName, emp.DOB));
         }
 
         public static void Main(string[] args)
@@ -57,11 +64,14 @@ namespace CSharp
                 emp[i].DOB =DateTime.Parse(Console.ReadLine());
             }
 
-            foreach (var employee in emp)
+            foreach (Employee employee in emp)
             {
-                //Console.WriteLine(string.Format("Employee Id {0},First Name {1},Middle Name {2},Last Name {3},DOB {4}",
-                //    employee.EmployeeId, employee.FirstName, employee.MiddleName, employee.LastName, employee.DOB.ToShortDateString()));
-                Display(employee.EmployeeId, employee.FirstName, employee.MiddleName, employee.LastName, employee.DOB.ToShortDateString());
+                //Since this is a Instance Function, we need to create object of the class to access the method.
+                Structures structures = new Structures();
+                structures.Display(employee.EmployeeId, employee.FirstName, employee.MiddleName, employee.LastName, employee.DOB.ToShortDateString());
+                
+                //Since this is a Static Method, no object is required to call this method.
+                DisplayEmployee(employee);
             }
             Console.ReadLine();
         }
