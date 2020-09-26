@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace CSharp
 {
-    class test {
-        public void Test() {
+    class test
+    {
+        public void Test()
+        {
             Console.WriteLine("I am from test");
         }
     }
@@ -15,7 +17,7 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            ////while
+            //while
             //int i = 10;
             //while (i >= 0)
             //{
@@ -46,17 +48,16 @@ namespace CSharp
             //{
             //    Console.WriteLine(a);
             //}
-            ////////for
+            //////////for
             //for (int j = 0; j <= 10; j++)
             //{
             //    //break and Continue
             //    if (j % 2 == 0)
-            //        continue;	//Restarts the loop
+            //        continue;	//Go to the next item...
             //    Console.WriteLine("Value of i: {0}", j);
             //}
 
             ////Array
-
             //int[] array = new int[5];
             //for (int idx = 0; idx < array.Length; idx++)
             //{
@@ -70,7 +71,7 @@ namespace CSharp
             //}
 
             //////foreach
-            //foreach (var item in array)
+            //foreach (int item in array)
             //{
             //    Console.WriteLine("Value : {0}", item);
             //}
@@ -94,7 +95,7 @@ namespace CSharp
             //        //Console.WriteLine("The value in the index: {0},{1} is {2}", row, col, twoDarray[row, col]);
             //        Console.Write("{0}\t", twoDarray[row, col]);
             //    }
-            //    Console.WriteLine("\n");
+            //    Console.WriteLine();
             //}
 
             //ArrayList - ArrayList is a collection of objects
@@ -102,17 +103,20 @@ namespace CSharp
             ArrayList objArray = new ArrayList();
             objArray.Clear();
             objArray.Add(1);
+            objArray.AddRange(new ArrayList() { "Harshni", "Sample" });
             objArray.Add("string");
             objArray.Add('c');
             objArray.Add(new test());
-            ArrayList obj = (ArrayList)objArray.Clone();
+            ArrayList objArrayData = (ArrayList)objArray.Clone();
+            objArray.Insert(1,new ArrayList() { "Harshni", "Sample" });
             bool existsone = objArray.Contains("string");
             objArray.Insert(2, 123);
             objArray.Remove(1);
-            objArray.RemoveRange(1, 2);
+            objArray.RemoveAt(1);
+            objArray.RemoveRange(1, 1);
             Array o = objArray.ToArray();
 
-            foreach (var item in objArray)
+            foreach (object item in objArray)
             {
                 if (item.GetType() == typeof(int))
                 {
@@ -126,13 +130,12 @@ namespace CSharp
                 {
                     Console.WriteLine(item);
                 }
-                else if (item.GetType() == typeof(test))
+                else if (item.GetType()==typeof(test))
                 {
                     test o1 = (test)item;
                     o1.Test();
                 }
             }
-
         }
     }
 }
