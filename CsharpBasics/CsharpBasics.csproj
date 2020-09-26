@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <StartupObject>CSharp.Operators</StartupObject>
+    <StartupObject>CSharp.Loops</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,7 +25,6 @@
     <Compile Remove="Indexer.cs" />
     <Compile Remove="Interfaces.cs" />
     <Compile Remove="Interop.cs" />
-    <Compile Remove="Loops.cs" />
     <Compile Remove="Namespaces.cs" />
     <Compile Remove="PrivateAssemblyAccessor.cs" />
     <Compile Remove="Reflections.cs" />
