@@ -14,4 +14,17 @@ namespace CSharp
             dt.display();
         }
     }
+
+    class SubStudent : Student
+    {
+        public void AccessBaseClassMembers()
+        {
+            base.display();
+        }
+        public static void Main(string[] test)
+        {
+            SubStudent student = new SubStudent();
+            student.display();
+        }
+    }
 }
