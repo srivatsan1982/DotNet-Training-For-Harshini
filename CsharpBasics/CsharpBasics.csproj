@@ -16,7 +16,6 @@
     <Compile Remove="FileStream.cs" />
     <Compile Remove="FileStreamBasics.cs" />
     <Compile Remove="FirstClass.cs" />
-    <Compile Remove="Functions.cs" />
     <Compile Remove="Generics.cs" />
     <Compile Remove="Indexer.cs" />
     <Compile Remove="Interfaces.cs" />
@@ -24,6 +23,7 @@
     <Compile Remove="PrivateAssemblyAccessor.cs" />
     <Compile Remove="Reflections.cs" />
     <Compile Remove="SecondClass.cs" />
+    <Compile Remove="TestAccessSpecifier.cs" />
     <Compile Remove="Threading.cs" />
     <Compile Remove="UsingKeyWord.cs" />
   </ItemGroup>
