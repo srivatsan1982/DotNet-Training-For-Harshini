@@ -87,16 +87,17 @@ namespace Mynamespace
     {
         public class Routine
         {
-            public static long Add(params int[] args)
+            public static long Add(params int[] harshni)
             {
                 int ctr = 0;
                 long Answer = 0;
-                for (ctr = 0; ctr < args.Length; ctr++)
+                for (ctr = 0; ctr < harshni.Length; ctr++)
                 {
-                    Answer += args[ctr];
+                    Answer += harshni[ctr];
                 }
                 return Answer;
             }
+
             public static long Subtract(int arg1, int arg2)
             {
                 long Answer = 0;
