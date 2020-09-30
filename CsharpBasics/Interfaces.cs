@@ -22,212 +22,224 @@ namespace CSharp
    //	*/
     //	
     //	Defining an Interface with Method members
-    //interface Ishape
+    //interface ICalculator
     //{
-    //    double Area();
-    //    double Circumference();
-    //    int Sides();
+    //    int Add(int a, int b);
     //}
 
-    //public class Circle : Ishape
+    //class Calculator : ICalculator
     //{
-    //    public int x, y;
-    //    public double radius;
-    //    private const float PI = 3.14159F;
-
-    //    public Circle()
+    //    public int Add(int a, int b)
     //    {
-    //        x = 0;
-    //        y = 0;
-    //        radius = 0.0;
-
+    //        return a + b;
     //    }
-    //    public double Area()
+    //    public static void Main(string[] args)
     //    {
-    //        return PI * radius * radius;
+    //        ICalculator obj = new Calculator();
+    //        Console.WriteLine("The Sum is {0}", obj.Add(10, 20));
+    //        Display(10, 20, obj);
     //    }
-
-    //    public double Circumference()
+    //    static void Display(int a,int b,ICalculator calcObj)
     //    {
-    //        return ((double)(2 * PI * radius));
+    //        Console.WriteLine("The Sum is {0}", calcObj.Add(a, b));
     //    }
-
-    //    public int Sides()
-    //    {
-    //        return 1;
-    //    }
-
     //}
 
-    //public class Square : Ishape
-    //{
-    //    public int side;
-    //    public double Area()
+    //    interface Ishape
     //    {
-    //        return ((double)(side * side));
-
-    //    }
-    //    public double Circumference()
-    //    {
-    //        return ((double)(4 * side));
-    //    }
-    //    public int Sides()
-    //    {
-    //        return 4;
-    //    }
-    //    public Square()
-    //    {
-    //        side = 0;
+    //        double Area();
+    //        double Circumference();
+    //        int Sides();
     //    }
 
-    //}
-
-    ////<summary>
-    ////Summary description for Class1.
-    ////</summary>
-    //class shape
-    //{
-
-    //    [STAThread]
-    //    static void Main(string[] args)
+    //    public class Circle : Ishape
     //    {
-    //        Circle mycircle = new Circle();
-    //        mycircle.radius = 5;
-    //        Square mysquare = new Square();
-    //        mysquare.side = 4;
+    //        public int x, y;
+    //        public double radius;
+    //        private const float PI = 3.14159F;
 
-    //        Console.WriteLine("\n Displaying the Circle Information :");
-    //        displayinfo(mycircle);
+    //        public Circle()
+    //        {
+    //            x = 0;
+    //            y = 0;
+    //            radius = 0.0;
 
-    //        Console.WriteLine("\n Displaying the Square Information :");
-    //        displayinfo(mysquare);
+    //        }
+    //        public double Area()
+    //        {
+    //            return PI * radius * radius;
+    //        }
+
+    //        public double Circumference()
+    //        {
+    //            return ((double)(2 * PI * radius));
+    //        }
+
+    //        public int Sides()
+    //        {
+    //            return 1;
+    //        }
 
     //    }
-    //    static void displayinfo(Ishape Myshape)
+
+    //    public class Square : Ishape
     //    {
-    //        Console.WriteLine("Area :{0} ", Myshape.Area());
-    //        Console.WriteLine("Sides :{0} ", Myshape.Sides());
-    //        Console.WriteLine("Circumference : {0} ", Myshape.Circumference());
+    //        public int side;
+    //        public double Area()
+    //        {
+    //            return ((double)(side * side));
+
+    //        }
+    //        public double Circumference()
+    //        {
+    //            return ((double)(4 * side));
+    //        }
+    //        public int Sides()
+    //        {
+    //            return 4;
+    //        }
+    //        public Square()
+    //        {
+    //            side = 0;
+    //        }
+
     //    }
-    //}
+
+    //    //<summary>
+    //    //Summary description for Class1.
+    //    //</summary>
+    //    class shape
+    //    {
+
+    //        [STAThread]
+    //        static void Main(string[] args)
+    //        {
+    //            Circle mycircle = new Circle();
+    //            mycircle.radius = 5;
+    //            Square mysquare = new Square();
+    //            mysquare.side = 4;
+
+    //            Console.WriteLine("\n Displaying the Circle Information :");
+    //            displayinfo(mycircle);
+
+    //            Console.WriteLine("\n Displaying the Square Information :");
+    //            displayinfo(mysquare);
+
+    //        }
+    //        static void displayinfo(Ishape Myshape)
+    //        {
+    //            Console.WriteLine("Area :{0} ", Myshape.Area());
+    //            Console.WriteLine("Sides :{0} ", Myshape.Sides());
+    //            Console.WriteLine("Circumference : {0} ", Myshape.Circumference());
+    //        }
+    //    }
     //}
     //	Defining properties in an Interface
-    //public interface IShape
-    //{
-    //    int Sides { get; set; }
-    //    double Area();
-    //}
-    //public class Square : IShape
-    //{
-    //    private int InSides;
-    //    public int SideLength;
-    //    //public double Area()
-    //    //{
-    //    //    return ((double)(SideLength * SideLength));
-    //    //}
-    //    //public int Sides
-    //    //{
-    //    //    get { return InSides; }
-    //    //    set { InSides = value; }
-    //    //}
-    //    public Square()
+    //    public interface IShape
     //    {
-    //        Sides = 4;
+    //        int Sides { get; set; }
+    //        double Area();
     //    }
-
-
-    //    public int Sides
+    //    public class Square : IShape
     //    {
-    //        get
+    //        private int side;
+    //        public Square()
     //        {
-    //            return InSides;
+
     //        }
-    //        set
+
+
+    //        public int Sides
     //        {
-    //            InSides = value;
+    //            get
+    //            {
+    //                return side;
+    //            }
+    //            set
+    //            {
+    //                side = value;
+    //            }
+    //        }
+
+    //        public double Area()
+    //        {
+    //            return ((double)(Sides * Sides));
     //        }
     //    }
-
-    //    public double Area()
+    //    public class Props
     //    {
-    //        return ((double)(SideLength * SideLength));
-    //    }
-    //}
-    //public class Props
-    //{
-    //    public static void Main()
-    //    {
-    //        Square mysquare = new Square();
-    //        mysquare.SideLength = 5;
+    //        public static void Main()
+    //        {
+    //            Square mysquare = new Square();
+    //            mysquare.Sides = 5;
 
-    //        Console.WriteLine("\n Displaying Square Information :");
-    //        Console.WriteLine("Area : {0} ", mysquare.Area());
-    //        Console.WriteLine("Sides : {0}", mysquare.Sides);
+    //            Console.WriteLine("\n Displaying Square Information :");
+    //            Console.WriteLine("Area : {0} ", mysquare.Area());
+    //            Console.WriteLine("Sides : {0}", mysquare.Sides);
 
+    //        }
     //    }
-    //}
     //}
     //	Defining Multiple Interface
-    //public interface IShape
-    //{
-    //    int Sides
+    //    public interface IShape
     //    {
-    //        get;
+    //        int Sides
+    //        {
+    //            get;
+    //        }
+
+    //        double Area();
     //    }
 
-    //    double Area();
-    //}
-
-    //public interface IShapeDisplay
-    //{
-    //    void Display();
-    //}
-
-    //public class Square : IShape, IShapeDisplay
-    //{
-    //    private int InSides;
-    //    public int SideLength;
-
-    //    public int Sides
+    //    public interface IShapeDisplay
     //    {
-    //        get { return InSides; }
+    //        void Display();
     //    }
 
-    //    public double Area()
+    //    public class Square : IShape, IShapeDisplay
     //    {
-    //        return ((double)(SideLength * SideLength));
+    //        private int InSides;
+
+    //        public int Sides
+    //        {
+    //            get { return InSides; }
+    //        }
+
+    //        public double Area()
+    //        {
+    //            return ((double)(Sides * Sides));
+    //        }
+
+    //        public double Circumference()
+    //        {
+    //            return ((double)(Sides * Sides));
+    //        }
+
+    //        public Square()
+    //        {
+    //            InSides = 4;
+    //        }
+
+    //        public void Display()
+    //        {
+    //            Console.WriteLine("\n Displaying Square Information :");
+    //            Console.WriteLine("Side length :{0} ", this.Sides);
+    //            Console.WriteLine("Sides :{0} ", this.Sides);
+    //            Console.WriteLine("Area : {0} ", this.Area());
+    //        }
+
     //    }
 
-    //    public double Circumference()
+    //    public class Multi
     //    {
-    //        return ((double)(Sides * SideLength));
+    //        public static void Main()
+    //        {
+    //            Square mysquare = new Square();
+    //            //mysquare.Sides = 7;
+
+    //            mysquare.Display();
+    //        }
     //    }
-
-    //    public Square()
-    //    {
-    //        InSides = 4;
-    //    }
-
-    //    public void Display()
-    //    {
-    //        Console.WriteLine("\n Displaying Square Information :");
-    //        Console.WriteLine("Side length :{0} ", this.SideLength);
-    //        Console.WriteLine("Sides :{0} ", this.Sides);
-    //        Console.WriteLine("Area : {0} ", this.Area());
-    //    }
-
-    //}
-
-    //public class Multi
-    //{
-    //    public static void Main()
-    //    {
-    //        Square mysquare = new Square();
-    //        mysquare.SideLength = 7;
-
-    //        mysquare.Display();
-    //    }
-    //}
     //}
 
     //}
@@ -237,121 +249,120 @@ namespace CSharp
         when you implement an interface that has a member name that clashes with another name already in use.
         if a class includes 2 or more interfaces with same member name that member needs to implement only once.
         This single implementation of the method satisfies both interface.
-	
+
         sometimes you want to implement the method independently for both interfaces.In this case you need to use
         explicit interface implementations.An explicit implementation is done by including the interface name with the 
         member name when you define the member.You must also use casting to call the method.
      */
-    //public interface IShape
-    //{
-    //    double Area();
-    //    int Sides { get; }
-    //    void Display();
-    //}
-    //public interface IShapeDisplay
-    //{
-    //    void Display();
-    //}
-    //public class Square : IShape, IShapeDisplay
-    //{
-    //    private int InSides;
-    //    public int SideLength;
-    //    public int Sides
+    //    public interface IShape
     //    {
-    //        get { return InSides; }
+    //        double Area();
+    //        int Sides { get; }
+    //        void Display();
     //    }
-    //    public double Area()
+    //    public interface IShapeDisplay
     //    {
-    //        return ((double)(SideLength * SideLength));
+    //        void Display();
     //    }
-    //    public double Circumference()
+    //    public class Square : IShape, IShapeDisplay
     //    {
-    //        return ((double)(Sides * SideLength));
-    //    }
-    //    public Square()
-    //    {
-    //        InSides = 4;
-    //    }
-    //    void IShape.Display()
-    //    {
-    //        Console.WriteLine("\n Displaying Square Shape's Information :");
-    //        Console.WriteLine("Side length :{0} ", this.SideLength);
-    //        Console.WriteLine("Sides :{0} ", this.Sides);
-    //        Console.WriteLine("Area : {0} ", this.Area());
-    //    }
-    //    void IShapeDisplay.Display()
-    //    {
-    //        Console.WriteLine("\n This method could draw the  Shape.... :");
-    //    }
-
-
-    //}
-
-    //public class Explicit
-    //{
-    //    public static void Main()
-    //    {
-    //        Square mySquare = new Square();
-    //        mySquare.SideLength = 7;
-    //        IShape ish = mySquare;
-    //        IShapeDisplay ishd = mySquare;
-
-    //        ish.Display();
-    //        ishd.Display();
+    //        private int InSides;
+    //        public int SideLength;
+    //        public int Sides
+    //        {
+    //            get { return InSides; }
+    //        }
+    //        public double Area()
+    //        {
+    //            return ((double)(SideLength * SideLength));
+    //        }
+    //        public double Circumference()
+    //        {
+    //            return ((double)(Sides * SideLength));
+    //        }
+    //        public Square()
+    //        {
+    //            InSides = 4;
+    //        }
+    //        void IShape.Display()
+    //        {
+    //            Console.WriteLine("\n Displaying Square Shape's Information :");
+    //            Console.WriteLine("Side length :{0} ", this.SideLength);
+    //            Console.WriteLine("Sides :{0} ", this.Sides);
+    //            Console.WriteLine("Area : {0} ", this.Area());
+    //        }
+    //        void IShapeDisplay.Display()
+    //        {
+    //            Console.WriteLine("\n This method could draw the  Shape.... :");
+    //        }
 
     //    }
-    //}
+
+    //    public class Explicit
+    //    {
+    //        public static void Main()
+    //        {
+    //            Square mySquare = new Square();
+    //            mySquare.SideLength = 7;
+    //            IShape ish = mySquare;
+    //            IShapeDisplay ishd = mySquare;
+
+    //            ish.Display();
+    //            ishd.Display();
+
+    //        }
+    //    }
     //}
     //
     ////	Hiding Interface Members
-    //
-    //public interface IShape
-    //{
 
-    //    //members leftout to simplify example.
-    //    int ShapeShifter(int val);
-    //    int Sides { get; set; }
-    //}
-    //public class Shape : IShape
-    //{
-    //    private int InSides;
-    //    public int Sides
+    //    public interface IShape
     //    {
-    //        get { return InSides; }
-    //        set { InSides = value; }
 
+    //        //members leftout to simplify example.
+    //        int ShapeShifter(int val);
+    //        int Sides { get; set; }
     //    }
-    //    int IShape.ShapeShifter(int val)
+    //    public class Shape : IShape
     //    {
-    //        Console.WriteLine("Shifting Shape ...");
-    //        val += 1;
-    //        return val;
+    //        private int InSides;
+    //        public int Sides
+    //        {
+    //            get { return InSides; }
+    //            set { InSides = value; }
 
+    //        }
+    //        int IShape.ShapeShifter(int val)
+    //        {
+    //            Console.WriteLine("Shifting Shape ...");
+    //            val += 1;
+    //            return val;
+
+    //        }
+    //        public Shape()
+    //        {
+    //            Sides = 5;
+    //        }
     //    }
-    //    public Shape()
+    //    public class Hide
     //    {
-    //        Sides = 5;
+    //        public static void Main()
+    //        {
+    //            Shape myShape = new Shape();
+    //            Console.WriteLine("My Shape has been created.");
+    //            Console.WriteLine("Using get accesser. Sides = {0}", myShape.Sides);
+
+    //            //myShape.Sides = myShape.ShapeShifter(myShape.Sides);  // ==> Error
+
+    //            IShape tmp = myShape;
+
+    //            myShape.Sides = tmp.ShapeShifter(myShape.Sides);
+
+    //            Console.WriteLine("ShapeShifter Called . Sides = {0}", myShape.Sides);
+
+
+    //        }
     //    }
-    //}
-    //public class Hide
-    //{
-    //    public static void Main()
-    //    {
-    //        Shape myShape = new Shape();
-    //        Console.WriteLine("My Shape has been created.");
-    //        Console.WriteLine("Using get accesser. Sides = {0}", myShape.Sides);
-
-    //        //myShape.Sides = myShape.ShapeShifter(myShape.Sides);  // ==> Error
-
-    //        IShape tmp = new Shape();
-
-    //        myShape.Sides = tmp.ShapeShifter(myShape.Sides);
-
-    //        Console.WriteLine("ShapeShifter Called . Sides = {0}", myShape.Sides);
-
-
-    //    }
-    //}
     //}
     //        //Deriving New Interface from Existing Intreface
     public interface IShape
@@ -369,31 +380,8 @@ namespace CSharp
 
     public class Test : I3DShape
     {
-        public int Depth
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public int Sides
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public int Depth { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Sides { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public long Area()
         {
