@@ -49,26 +49,28 @@ namespace CSharp
         }
     }
 
-    //static class ExtensionMethod
-    //{
-    //    public static int GetLength(this string str) {
-    //        return str.Length;
-    //    }
-    //    public static bool CheckPalindrome(this string str)
-    //    {
-    //        char[] tempstr = str.ToCharArray();
-    //        Array.Reverse(tempstr);
-    //        string revstr = new string(tempstr);
-    //        return str.Equals(revstr, StringComparison.OrdinalIgnoreCase);
-    //    }
-    //}
+    static class ExtensionMethod
+    {
+        public static int GetLength(this string str)
+        {
+            return str.Length;
+        }
+        public static bool CheckPalindrome(this string str)
+        {
+            char[] tempstr = str.ToCharArray();
+            Array.Reverse(tempstr);
+            string revstr = new string(tempstr);
+            return str.Equals(revstr, StringComparison.OrdinalIgnoreCase);
+        }
+    }
 
-    //public class AccessExtensionMethods {
-    //    static void Main(string[] args)
-    //    {
-    //        string str = "Malayalam";
-    //        Console.WriteLine(str.GetLength());
-    //        Console.WriteLine(str.CheckPalindrome());
-    //    }
-    //}
+    public class AccessExtensionMethods
+    {
+        static void Main(string[] args)
+        {
+            string str = "Malayalam";
+            Console.WriteLine(str.GetLength());
+            Console.WriteLine(str.CheckPalindrome());
+        }
+    }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -86,7 +87,8 @@ namespace CSharp
     //            }
     //            catch (DivideByZeroException ex)
     //            {
-    //                Console.WriteLine("Exception Caught ,{0}", ex);
+    //                throw ex;
+    //                //Console.WriteLine("Exception Caught ,{0}", ex);
     //            }
     //            catch (Exception ex)
     //            {
@@ -100,8 +102,14 @@ namespace CSharp
 
     //        public static void Main(string[] args)
     //        {
-    //            Class1.add(10, 0);
-
+    //            try
+    //            {
+    //                Class1.add(10, 0);
+    //            }
+    //            catch (Exception ex)
+    //            {
+    //                Console.Write(ex);
+    //            }
     //        }
     //    }
     //}
@@ -140,17 +148,17 @@ namespace CSharp
     //}
 
 
-    //class error
-    //{
-    //    public static void Main()
+    //    class error
     //    {
-    //        int[] myarray = new int[5];
-    //        for (int ctr = 0; ctr < 10; ctr++)
+    //        public static void Main()
     //        {
-    //            myarray[ctr] = ctr;
+    //            int[] myarray = new int[5];
+    //            for (int ctr = 0; ctr < 10; ctr++)
+    //            {
+    //                myarray[ctr] = ctr;
+    //            }
     //        }
     //    }
-    //}
     //}
     //    internal class error
     //    {
@@ -167,7 +175,7 @@ namespace CSharp
     //            }
     //            catch (IndexOutOfRangeException ex)
     //            {
-    //                Console.WriteLine("The exception was caught {0} {1}",ex.Message, ex.StackTrace);
+    //                Console.WriteLine("The exception was caught {0} {1}", ex.Message, ex.StackTrace);
     //            }
     //            Console.WriteLine("At end of class");
     //        }
@@ -267,7 +275,7 @@ namespace CSharp
     //                }
     //                else
     //                {
-    //                    Console.WriteLine("args.Length =", args.Length);
+    //                    //Console.WriteLine("args.Length =", args.Length);
     //                    //					FileStream fstr = new FileStream(args[0],FileMode.Open,FileAccess.Read );
     //                    FileStream fstr = new FileStream(@"E:\testfile.txt", FileMode.Open, FileAccess.Read);
     //                    try
@@ -304,45 +312,49 @@ namespace CSharp
     //    }
     //}
 
-    internal class UserDefinedException : Exception
-    {
-        public string Message;
-        public string Source;
+    //class UserDefinedException : Exception
+    //{
+    //    public string Message;
+    //    public string Source;
 
-        //public UserDefinedException(string Message, string Source) {
-        //    this.Message = Message;
-        //    this.Source = Source;
-        //}
-    }
+    //    //public UserDefinedException(string Message, string Source) {
+    //    //    this.Message = Message;
+    //    //    this.Source = Source;
+    //    //}
+    //}
 
-    class TestUserDefinedException
-    {
-        public string Add(int a, int b)
-        {
-            if (a > b)
-            {
-                //throw new UserDefinedException("Test", "Test");
-                //throw new UserDefinedException { Message = "A is greater than b", Source = "testing" };
+    //class TestUserDefinedException
+    //{
+    //    public string Add(int a, int b)
+    //    {
+    //        if (a > b)
+    //        {
+    //            //throw new UserDefinedException("Test", "Test");
+    //            //throw new UserDefinedException { Message = "A is greater than b", Source = "testing" };
 
-                throw new UserDefinedException { Message = "A is greater than B", Source = "TestUserDefinedException" };
+    //            throw new UserDefinedException { Message = "A is greater than B", Source = "TestUserDefinedException" };
 
-            }
-            return null;
-        }
+    //        }
+    //        return null;
+    //    }
 
-        public static void Main(string[] args)
-        {
-            TestUserDefinedException t = new TestUserDefinedException();
-            try
-            {
-                t.Add(10, 5);
-            }
-            catch (UserDefinedException ex)
-            {
-                Console.WriteLine(ex.Message + " " + ex.Source);
-            }
+    //    public static void Main(string[] args)
+    //    {
+    //        TestUserDefinedException t = new TestUserDefinedException();
+    //        try
+    //        {
+    //            t.Add(10, 5);
+    //        }
+    //        catch (UserDefinedException ex)
+    //        {
+    //            Console.WriteLine(ex.Message + " " + ex.Source);
+    //        }
+    //        catch (Exception ex)
+    //        {
+    //            Console.WriteLine(((UserDefinedException)ex).Message + " " + ((UserDefinedException)ex).Source);
+    //        }
 
 
-        }
-    }
+    //    }
+    //}
 }

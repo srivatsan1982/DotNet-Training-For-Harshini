@@ -70,37 +70,44 @@ namespace chap13
     */
 
 
-    //class File_Write
-    //{
-    //    /// <summary>
-    //    /// The main entry point for the application.
-    //    /// </summary>
-    //    [STAThread]
-    //    static void Main(string[] args)
+    //    class File_Write
     //    {
-    //        //FileStream fs = new FileStream(@"E:\test1.txt", FileMode.Create, FileAccess.Write);
-    //        //FileStream fs = new FileStream(@"e:\testfile.txt", FileMode.OpenOrCreate, FileAccess.Write);
-    //        //FileStream fs = new FileStream(@"e:\test1.txt", FileMode.Append, FileAccess.Write);
-    //        FileStream fs = new FileStream(@"E:\test1.bin", FileMode.CreateNew, FileAccess.Write);
+    //        /// <summary>
+    //        /// The main entry point for the application.
+    //        /// </summary>
+    //        [STAThread]
+    //        static void Main(string[] args)
+    //        {
+    //            try
+    //            {
+    //                //FileStream fs = new FileStream(@"E:\test1.txt", FileMode.Create, FileAccess.Write);
+    //                //FileStream fs = new FileStream(@"e:\testfile.txt", FileMode.OpenOrCreate, FileAccess.Write);
+    //                //FileStream fs = new FileStream(@"F:\HARSHINI_TRAINING\CsharpBasics\test.ini", FileMode.Append, FileAccess.Write);
+    //                //FileStream fs = new FileStream(@"E:\test1.bin", FileMode.CreateNew, FileAccess.Write);
+    //                //FileStream fs = new FileStream(@"F:\HARSHINI_TRAINING\CsharpBasics\test.ini", FileMode.CreateNew, FileAccess.Write);
+    //                //FileStream fs = new FileStream(@"e:\testfile.bin", FileMode.OpenOrCreate, FileAccess.Write);
 
-    //        //FileStream fs = new FileStream(@"e:\testfile.bin", FileMode.OpenOrCreate, FileAccess.Write);
-
-    //        StreamWriter w = new StreamWriter(fs);
-    //        Console.WriteLine("Enter a string:");
-    //        string str = Console.ReadLine();
-    //        w.Write(str);
-    //        w.Flush();
-    //        w.Close();
+    //                StreamWriter w = new StreamWriter(fs);
+    //                Console.WriteLine("Enter a string:");
+    //                string str = Console.ReadLine();
+    //                w.Write(str);
+    //                w.Flush();
+    //                w.Close();
+    //            }
+    //            catch (IOException ex)
+    //            {
+    //                Console.WriteLine(ex);
+    //            }
+    //        }
     //    }
-    //}
     //}
     //class File_Read
     //{
     //    public static void Main(string[] args)
     //    {
-    //        FileStream fs1 = new FileStream(@"e:\test1.bin", FileMode.Open, FileAccess.Read);
+    //        FileStream fs1 = new FileStream(@"F:\HARSHINI_TRAINING\CsharpBasics\test.ini", FileMode.Open, FileAccess.Read);
     //        StreamReader sr = new StreamReader(fs1);
-            
+
     //        sr.BaseStream.Seek(0, SeekOrigin.Begin);
     //        string str = sr.ReadLine();
     //        while (str != null)
@@ -140,31 +147,31 @@ namespace chap13
     //        }
     //    }
     //}
-    //public class Reading
-    //{
-    //    public static void Main(string[] args)
+    //    public class Reading
     //    {
-    //        if (args.Length < 1)
+    //        public static void Main(string[] args)
     //        {
-    //            Console.WriteLine("Must Include file name ");
-    //        }
-    //        else
-    //        {
-    //            string buffer;
-    //            StreamReader myfile = File.OpenText(args[0]);
-    //            //while ((buffer = myfile.ReadLine()) != null)
-    //            //{
-    //            //    Console.WriteLine(buffer);
-    //            //}
-    //            //myfile.Close();
-    //            while (!myfile.EndOfStream)
+    //            if (args.Length < 1)
     //            {
-    //                Console.WriteLine(myfile.ReadLine());
+    //                Console.WriteLine("Must Include file name ");
     //            }
-    //            myfile.Close();
-    //        }
+    //            else
+    //            {
+    //                string buffer;
+    //                StreamReader myfile = File.OpenText(args[0]);
+    //                //while ((buffer = myfile.ReadLine()) != null)
+    //                //{
+    //                //    Console.WriteLine(buffer);
+    //                //}
+    //                //myfile.Close();
+    //                while (!myfile.EndOfStream)
+    //                {
+    //                    Console.WriteLine(myfile.ReadLine());
+    //                }
+    //                myfile.Close();
+    //            }
 
+    //        }
     //    }
-    //}
 
 }
