@@ -38,8 +38,8 @@ namespace CSharp
             {
                 Console.WriteLine("Field Info {0}", field.Name);
                 if (field.FieldType == typeof(string))
-                    field.SetValue(field.Name, "120");
-                Console.WriteLine("Field Info {0}", field.GetValue(field.Name));
+                    field.SetValue(new TestReflection(), "120");
+                Console.WriteLine("Field Info {0}", field.GetValue(new TestReflection()));
 
             }
 
