@@ -42,6 +42,8 @@ namespace CSharp
             var obj = new EventHandling(10);
             obj.NumberChanged += new NumChangeHandler(NumberHandler);
             obj.SetValue(20);
+            obj.NumberChanged -= new NumChangeHandler(NumberHandler);
+            obj.SetValue(30);
         }
     }
 }

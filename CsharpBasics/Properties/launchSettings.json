@@ -2,7 +2,7 @@
   "profiles": {
     "CsharpBasics": {
       "commandName": "Project",
-      "commandLineArgs": "\"Harshni CSharp Training\""
+      "commandLineArgs": "\"F:\\HARSHINI_TRAINING\\CsharpBasics\\test.ini\""
     }
   }
 }

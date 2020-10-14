@@ -1,4 +1,4 @@
-﻿#define Trace
+﻿//#define Trace
 using System;
 using System.Diagnostics;
 using System.Reflection;
@@ -40,7 +40,7 @@ namespace CSharpBasics
     #region [Obsolete Attribute]
     //public class Attributes
     //{
-    //    [Obsolete("Don't use OldMethod, use NewMethod instead", false)]
+    //    [Obsolete("Don't use OldMethod, use NewMethod instead", true)]
     //    static void OldMethod()
     //    {
     //        Console.WriteLine("It is the old method");
@@ -119,8 +119,8 @@ AllowMultiple = true)]
             }
         }
     }
-    
-    [DeBugInfo(bg:120,dev:"Anju",d:"16/03/2017")]
+
+    [DeBugInfo(bg: 120, dev: "Harshni", d: "16/03/2017")]
     [DeBugInfo(45, "Srivatsan", "12/8/2012", Message = "Return type mismatch")]
     [DeBugInfo(49, "Aashish", "10/10/2012", Message = "Unused variable")]
     class Rectangle
@@ -147,9 +147,6 @@ AllowMultiple = true)]
         }
     }
 
-    /// <summary>
-    /// Attributes Class.
-    /// </summary>
     public class Attributes
     {
         static void Main(string[] args)
