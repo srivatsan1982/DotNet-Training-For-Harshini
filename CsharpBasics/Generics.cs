@@ -13,8 +13,10 @@ namespace CSharp
     //    public static void Main(string[] args)
     //    {
     //        int i = 10;
+    //        //Boxing
     //        object obj = i;
     //        Console.WriteLine(obj.ToString() + obj.ToString());
+    //        //UnBoxing
     //        int x = (int)obj;
     //        Console.WriteLine(x + x);
     //    }
@@ -48,7 +50,7 @@ namespace CSharp
     //    //    set { queries[t] = value; }
     //    //}
     //}
-    //class Program
+    //class ProgramGenerics
     //{
     //    static void Main(string[] args)
     //    {
@@ -69,7 +71,7 @@ namespace CSharp
     //        }
 
     //        TestClass<string> strObj = new TestClass<string>();
-    //        strObj.Add("Anju");
+    //        strObj.Add("Harshni");
     //        strObj.Add("Bhoomi");
     //        for (int i = 0; i < 2; i++)
     //        {
@@ -79,7 +81,7 @@ namespace CSharp
     //    }
     //}
 
-    //class Program
+    //class ProgramGenericsMethod
     //{
     //    //Generic method
     //    static void Swap<T>(ref T a, ref T b)
@@ -103,7 +105,7 @@ namespace CSharp
     //    }
     //}
 
-    //public class Program
+    //public class ProgramDictionary
     //{
     //    static void Main(string[] args)
     //    {
@@ -264,7 +266,7 @@ namespace CSharp
     //        return new Class52Test();
     //    }
     //}
-    //public class Program
+    //public class ProgramFactory
     //{
     //    public static void Main(string[] args)
     //    {
@@ -275,13 +277,13 @@ namespace CSharp
     //}
 
     //Tuple
-    //class Program
+    //class ProgramTuple
     //{
     //    static void Main()
     //    {
     //        // Create three-item tuple.
-    //        Tuple<int, string, bool, string> tuple =
-    //            new Tuple<int, string, bool, string>(1, "cat", true, "test");
+    //        Tuple<int, string, bool, string,bool> tuple =
+    //            new Tuple<int, string, bool, string,bool>(1, "cat", true, "test",false);
 
     //        // Access tuple properties.
 
@@ -301,7 +303,7 @@ namespace CSharp
     //    }
     //}
 
-    class Program
+    class ProgramDynamic
     {
         static dynamic _y;
 
@@ -325,6 +327,7 @@ namespace CSharp
             _y.Error = "test";
             _y.blahblah = 123;
             _y.anju = "Testing";
+            _y.harshni = "sample";
             // You can call anything on a dynamic variable,
             // ... but it may result in a runtime error.
             Console.WriteLine(_y.Error);
