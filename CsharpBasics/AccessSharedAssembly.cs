@@ -10,8 +10,8 @@ namespace CSharp
     public class AccessSharedAssembly
     {
         public static void Main(string[] args) {
-            var objShared = new SharedAssembly.Math();
-            objShared.Add(10, 20, 30, 40);
+            var objShared = new SharedMathematics();
+            objShared.Add(10, 20);
         }
     }
 }
